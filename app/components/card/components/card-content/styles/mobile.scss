@@ -1,19 +1,43 @@
 .card__content {
+    display: contents;
     position: relative;
-    margin: 20px 20px 16px 20px !important;
 
     h2 {
         font-size: 20px;
     }
 
+    h2,p,div {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
     &__author {
         font-size: 12px;
         color: $fudo-light-grey;
+        flex-grow: 1;
     }
-    
-    &__description{
+
+    &__description {
         overflow: hidden;
         text-overflow: ellipsis;
+    }
+
+    &__button {
+        color: #fff;
+        background-color: $fudo-orange;
+        border-color: $fudo-orange;
+        border: none;
+        text-align: center;
+        padding: 8px 15px;
+        line-height: 1.2 !important;
+        font-size: 16px;
+        color: white;
+        border-radius: 5px;
+        outline: none !important;
+        white-space: normal;
+        text-transform: uppercase;
+        cursor: pointer;
+        margin-bottom: 24px;
     }
 
 }
