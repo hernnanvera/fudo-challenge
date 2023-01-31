@@ -1,4 +1,4 @@
-# Welcome to Remix!
+# Welcome to Fudo challenge!
 
 - [Remix Docs](https://remix.run/docs)
 
