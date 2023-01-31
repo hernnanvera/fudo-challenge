@@ -18,12 +18,12 @@ export class NewsAPI {
         return data;
     }
 
-    static async loadArticle(params: URLSearchParams, articleId: string) {
+    static async loadArticle(params: URLSearchParams, articleTitle: string) {
         const pageSize = 1;
         params.append('country', this.country)
         params.append('apiKey', this.newsApiKey)
         params.append('pageSize', pageSize.toString());
-        params.append('q', articleId)
+        params.append('q', articleTitle)
 
         const { data } = await NewsAPI.getNews(params);
         return data;

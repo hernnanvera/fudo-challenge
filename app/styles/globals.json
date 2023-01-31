@@ -1,5 +1,6 @@
 {
     "fudo-grey": "#37394f",
-    "fudo-light-grey": "#656e86",
+    "fudo-light-grey100": "#656e866b",
+    "fudo-light-grey200": "#656e86",
     "fudo-orange": "#ff5023"
 }

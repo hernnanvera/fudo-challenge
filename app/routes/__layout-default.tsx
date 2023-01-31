@@ -6,7 +6,7 @@ export default function Index() {
 
     return (
         <>
-            <Header />
+            <Header logo="/icons/logo-fudo.png" logoAlt="fudo logo" />
             <main>
                 <Outlet />
             </main>

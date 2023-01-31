@@ -9,7 +9,7 @@ export default function CardContainer({ newsCards }: CardContainerProps) {
         <>
             <div className="card-section">
                 {
-                    newsCards.map((item, index) => (
+                    newsCards?.map((item, index) => (
                         <>
                             <Card
                                 title={item.title}

@@ -4,8 +4,9 @@ export const getArticleTitle = (id: string | undefined) => {
 
 export const getArticleID = (title: string | undefined): string | null => {
     if (!title) return null;
-    const articleTitle = title.split(" - ")[0];
-    const partialId = articleTitle.replace(/[^a-zA-Z0-9 ]/g, "").trim().toLocaleLowerCase();
-    const articleId = partialId.replace(/\s/g, "-");
+    //uncomment if i want the id without the source
+    // const articleTitle = title.split(" - ")[0];
+    // const partialId = title.replace(/[^a-zA-Z0-9 ]/g, "").trim().toLocaleLowerCase();
+    const articleId = title.replace(/\s/g, "-");
     return articleId;
 }

@@ -73,7 +73,7 @@ const _fetch: any = async (
     if (throwError) throw response;
   }
 
-  if (response.status === 404 && throwError) {
+  if ( (response.status === 404 || response.status === 429 )  && throwError) {
     throw response;
   }
 

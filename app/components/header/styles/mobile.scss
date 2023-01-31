@@ -3,11 +3,17 @@ header {
     width: 100%;
 }
 
-.content {
-    &__container {
+.header-container {
+    &__logo {
         display: flex;
         justify-content: initial;
         align-items: center;
         height: 6em;
+        margin-left: 24px;
+
+        img {
+            padding-left: 4px;
+        }
+
     }
 }
