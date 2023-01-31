@@ -1,6 +1,5 @@
 {
     "newsApiURL": "https://newsapi.org/v2",
-    "newsApiKey": "e3a0b4f94235476295160cb4c329d40e",
     "pageSize": 24,
     "initPage": 1,
     "country": "ar",

@@ -3,7 +3,7 @@ import { getSiteConfig } from "~/utils/config/index.server";
 
 export class NewsAPI {
     static newsApiURL = getSiteConfig('newsApiURL')
-    static newsApiKey = getSiteConfig('newsApiKey')
+    static newsApiKey = process.env.NEWS_API_KEY
     static pageSize = getSiteConfig('pageSize')
     static page = getSiteConfig('initPage')
     static country = getSiteConfig('country')
