@@ -7,6 +7,6 @@ export const getArticleID = (title: string | undefined): string | null => {
     //uncomment if i want the id without the source
     // const articleTitle = title.split(" - ")[0];
     // const partialId = title.replace(/[^a-zA-Z0-9 ]/g, "").trim().toLocaleLowerCase();
-    const articleId = title.replace(/\s/g, "-");
+    const articleId = title.replace(/:/g, " ").replace(/\s/g, "-");
     return articleId;
 }
