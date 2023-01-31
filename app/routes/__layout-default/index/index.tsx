@@ -3,6 +3,7 @@ import { NewsAPI } from "~/loaders/news.server";
 import { useLoaderData } from "@remix-run/react";
 import { json, MetaFunction } from "@remix-run/node";
 import CardContainer from "~/components/card-container";
+import { getSiteConfig } from "~/utils/config/index.server";
 
 export const meta: MetaFunction = ({ data }) => {
 
@@ -19,9 +20,8 @@ export const loader: LoaderFunction = async ({ request,
   const urlSearchParams: URLSearchParams = new URLSearchParams();
   const promises = [NewsAPI.loadNews(urlSearchParams, request)];
   const [news] = await Promise.all(promises);
-  //TODO: load from config file
-  const canonicalUrl = 'https://fudo-challenge.vercel.app/';
-  const title = "Las noticias más destacadas en tiempo real"
+  const canonicalUrl = getSiteConfig('canonicalBaseUrl');
+  const title =  getSiteConfig('title')
 
   return json(
     {

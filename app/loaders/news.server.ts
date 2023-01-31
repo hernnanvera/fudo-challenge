@@ -1,13 +1,12 @@
 import { getDataRequest } from "~/actions/fetch.server";
+import { getSiteConfig } from "~/utils/config/index.server";
 
 export class NewsAPI {
-
-    //TODO: load from config file
-    static newsApiURL = "https://newsapi.org/v2"
-    static newsApiKey = "e3a0b4f94235476295160cb4c329d40e"
-    static pageSize = 24
-    static page = 1
-    static country = "ar"
+    static newsApiURL = getSiteConfig('newsApiURL')
+    static newsApiKey = getSiteConfig('newsApiKey')
+    static pageSize = getSiteConfig('pageSize')
+    static page = getSiteConfig('initPage')
+    static country = getSiteConfig('country')
 
     static async loadNews(params: URLSearchParams, request: Request) {
         params.append('country', this.country)
