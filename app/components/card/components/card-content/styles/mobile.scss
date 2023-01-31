@@ -1,0 +1,19 @@
+.card__content {
+    position: relative;
+    margin: 20px 20px 16px 20px !important;
+
+    h2 {
+        font-size: 20px;
+    }
+
+    &__author {
+        font-size: 12px;
+        color: $fudo-light-grey;
+    }
+    
+    &__description{
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+}

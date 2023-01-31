@@ -1,0 +1,13 @@
+header {
+    background-color: $fudo-grey;
+    width: 100%;
+}
+
+.content {
+    &__container {
+        display: flex;
+        justify-content: initial;
+        align-items: center;
+        height: 6em;
+    }
+}
