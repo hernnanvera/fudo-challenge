@@ -7,7 +7,7 @@ export class NewsAPI {
     static newsApiKey = "e3a0b4f94235476295160cb4c329d40e"
     static pageSize = 24
     static page = 1
-    static country = "us"
+    static country = "ar"
 
     static async loadNews(params: URLSearchParams, request: Request) {
         params.append('country', this.country)

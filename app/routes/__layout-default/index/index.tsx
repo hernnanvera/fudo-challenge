@@ -4,10 +4,10 @@ import { useLoaderData } from "@remix-run/react";
 import { json, MetaFunction } from "@remix-run/node";
 import CardContainer from "~/components/card-container";
 
-export const meta: MetaFunction = () => {
+export const meta: MetaFunction = ({ data }) => {
 
   const metaBody = {
-    title: ' Las noticias más destacadas en tiempo real | Fudo Challenge',
+    title: `${data.title} | Fudo Challenge`,
     description: 'Encontrá las noticias más recientes y destacadas.',
     robots: 'index, follow',
   };
@@ -19,12 +19,15 @@ export const loader: LoaderFunction = async ({ request,
   const urlSearchParams: URLSearchParams = new URLSearchParams();
   const promises = [NewsAPI.loadNews(urlSearchParams, request)];
   const [news] = await Promise.all(promises);
+  //TODO: load from config file
   const canonicalUrl = 'https://fudo-challenge.vercel.app/';
+  const title = "Las noticias más destacadas en tiempo real"
 
   return json(
     {
       news: news.articles,
-      canonicalUrl
+      canonicalUrl,
+      title
     }
   )
 
@@ -33,14 +36,17 @@ export const loader: LoaderFunction = async ({ request,
 interface LoaderData {
   news: any
   canonicalUrl: string
+  title: string
 }
 
 export default function Index(): JSX.Element {
 
-  const { news } = useLoaderData() as LoaderData;
+  const { news, title } = useLoaderData() as LoaderData;
+  const showTitle = true;
 
   return (
-    <div className="container">
+    <div className="news-container">
+      {showTitle && <h1>{title}</h1>}
       <CardContainer newsCards={news} />
     </div>
   );

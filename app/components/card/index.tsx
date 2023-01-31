@@ -11,7 +11,7 @@ export default function Card({ title, author, description, imageUrl }: CardProps
     return (
         <>
             <div className="card">
-                <img src={imageUrl} alt={title}></img>
+                <img src={imageUrl || "/images/default-image.png"} alt={title}></img>
                 <CardContent
                     title={title}
                     author={author}
