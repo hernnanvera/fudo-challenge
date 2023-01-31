@@ -2,6 +2,7 @@ import { getDataRequest } from "~/actions/fetch.server";
 
 export class NewsAPI {
 
+    //TODO: load from config file
     static newsApiURL = "https://newsapi.org/v2"
     static newsApiKey = "e3a0b4f94235476295160cb4c329d40e"
     static pageSize = 24
