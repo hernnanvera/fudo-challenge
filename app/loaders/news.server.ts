@@ -5,7 +5,6 @@ export class NewsAPI {
     static newsApiURL = getSiteConfig('newsApiURL')
     static newsApiKey = process.env.NEWS_API_KEY
     static pageSize = getSiteConfig('pageSize')
-    static page = getSiteConfig('initPage')
     static country = getSiteConfig('country')
 
     static async loadNews(params: URLSearchParams, request: Request) {

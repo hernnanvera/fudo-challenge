@@ -17,7 +17,10 @@ export const meta: MetaFunction = ({ data }) => {
 
 export const loader: LoaderFunction = async ({ request,
   params }) => {
+    
   const urlSearchParams: URLSearchParams = new URLSearchParams();
+  const page = params?.pageNumber || getSiteConfig('initPage');
+  urlSearchParams.append('page', page.toString())
   const promises = [NewsAPI.loadNews(urlSearchParams, request)];
   const [news] = await Promise.all(promises);
   const canonicalUrl = getSiteConfig('canonicalBaseUrl');
