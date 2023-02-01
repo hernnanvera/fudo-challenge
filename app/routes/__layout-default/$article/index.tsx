@@ -6,23 +6,23 @@ import { NewsAPI } from "~/loaders/news.server";
 import { getArticleTitle } from "~/utils/article";
 
 export const meta: MetaFunction = ({ data }) => {
+    // As it is a challenge exercise, we defined robots noindex, nofollow
     const article = data?.article;
     const metaBody = {
         title: article?.title,
         description: article?.description,
-        robots: 'index, follow',
+        robots: 'noindex, nofollow',
     };
     return metaBody;
 };
 
 
 export const loader: LoaderFunction = async ({ params, request }) => {
-
     const urlSearchParams: URLSearchParams = new URLSearchParams();
     const articleTitle = getArticleTitle(params?.article);
     const promises = [articleTitle ? NewsAPI.loadArticle(urlSearchParams, articleTitle) : []];
     const [news] = await Promise.all(promises);
-    const article = news.articles?.length ? news.articles[0] : []
+    const article = news.articles?.length ? news.articles[0] : [];
     const canonicalUrl = `https://fudo-challenge.vercel.app/${params?.article}`;
 
     return json(

@@ -3,7 +3,6 @@ import Footer from "~/components/footer";
 import Header from "~/components/header";
 
 export default function Index() {
-
     return (
         <>
             <Header logo="/icons/logo-fudo.png" logoAlt="fudo logo challenge" logoTitle="Fudo Challenge" />
@@ -13,6 +12,4 @@ export default function Index() {
             <Footer />
         </>
     )
-
-
 }

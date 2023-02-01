@@ -31,5 +31,4 @@ export class NewsAPI {
     private static getNews(params: URLSearchParams) {
         return getDataRequest(`${this.newsApiURL}/top-headlines?${params.toString()}`, { throwError: true });
     }
-
 }

@@ -17,5 +17,4 @@ export default function CardContent({ title, author, description, articleID }: C
             </div>
         </>
     )
-
 }

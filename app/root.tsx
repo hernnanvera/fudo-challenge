@@ -13,22 +13,15 @@ import { DynamicLinks } from "remix-utils";
 /**
  * Styles
  */
-// import mainStyles from "./styles/main.scss";
-// ...
 import desktopStyles from "~/styles/desktop.css";
 import mobileStyles from "~/styles/mobile.css";
 import ErrorPage from "./components/error-page";
-
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
   title: "Fudo Challenge",
   viewport: "width=device-width,initial-scale=1",
 });
-
-// export function dynamicLinks() {
-//   return [{href: mainStyles, rel: 'stylesheet'}];
-// }
 
 export function links() {
   return [
@@ -60,14 +53,13 @@ const PlainError = (error: any) => {
   return (
     <>
       {status && status === 404 ? <h1> 404 Not Found</h1> : ErrorPage()}
-
     </>
   );
 }
 
-// export const CatchBoundary = () => {
-//   const error = useCatch();
-//   return PlainError(error);
-// };
+export const CatchBoundary = () => {
+  const error = useCatch();
+  return PlainError(error);
+};
 
-// export const ErrorBoundary = PlainError;
+export const ErrorBoundary = PlainError;

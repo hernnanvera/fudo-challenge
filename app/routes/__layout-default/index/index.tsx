@@ -7,18 +7,17 @@ import { getSiteConfig } from "~/utils/config/index.server";
 import Pagination from "~/components/pagination";
 
 export const meta: MetaFunction = ({ data }) => {
-
+  // As it is a challenge exercise, we defined robots noindex, nofollow
   const metaBody = {
     title: `${data.title} | Fudo Challenge`,
     description: 'Encontrá las noticias más recientes y destacadas.',
-    robots: 'index, follow',
+    robots: 'noindex, nofollow',
   };
   return metaBody;
 };
 
 export const loader: LoaderFunction = async ({ request,
   params }) => {
-
   const urlSearchParams: URLSearchParams = new URLSearchParams();
   const page = params?.pageNumber || getSiteConfig('initPage');
   const pageSize = getSiteConfig('pageSize');
@@ -39,7 +38,6 @@ export const loader: LoaderFunction = async ({ request,
       title,
     }
   )
-
 }
 
 interface LoaderData {
@@ -52,7 +50,6 @@ interface LoaderData {
 }
 
 export default function Index(): JSX.Element {
-
   const { news, totalResults, currentPage, pageSize, title } = useLoaderData() as LoaderData;
   const showTitle = true;
 

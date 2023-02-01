@@ -1,4 +1,3 @@
-
 interface ArticleContainerProps {
     title: string,
     description: string,
@@ -22,5 +21,4 @@ export default function ArticleContainer({ title, description, date, image, cont
             </div>
         </>
     )
-
 }

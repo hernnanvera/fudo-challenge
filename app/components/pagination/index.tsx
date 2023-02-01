@@ -4,7 +4,6 @@ interface PaginationProps {
     pageSize: number,
 }
 
-
 export default function Pagination({ totalResults, currentPage, pageSize }: PaginationProps): JSX.Element {
     const previousPage = currentPage - 1;
     const nextPage = currentPage + 1;
