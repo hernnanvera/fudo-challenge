@@ -49,4 +49,6 @@ npm run dev
  - Mejoras en el paginado para favorecer al crawleo de google.
  - Implementacion de test unitarios
  - Filtro por Origen de la noticia y por Región
+ - Página de error 404 para id de artículo inválido
  - Mejoras en meta tags en paginado
+ - Mejoras en meta tags en página de error.
