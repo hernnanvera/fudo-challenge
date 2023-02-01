@@ -6,7 +6,7 @@ https://fudo-challenge-hernnanvera.vercel.app/
 
 ## Objetivo
 El ejercicio consiste en crear una aplicación simple en algún framework web (Por ej.
-Angular, React, Vue, u otro) para visualizar noticias, utilizando  API de NewsApi.
+Angular, React, Vue, u otro) para visualizar noticias, utilizando la API de NewsApi.
 
 ## Requerimientos Fundamentales
  - Deberá tener un Header y un Footer.
@@ -39,8 +39,8 @@ Luego, podremos correr la aplicacion con el siguiente comando:
 npm run dev
 ```
 
-## Documentación extra
-[Notion](https://slime-operation-f35.notion.site/Fudo-Challenge-40e8f08dd71447698492ef9855d1794b)
+## Documentación adicional
+[Notion del challenge](https://slime-operation-f35.notion.site/Fudo-Challenge-40e8f08dd71447698492ef9855d1794b)
 
 ## Próximas iteraciones
  - Breadcrumbs
