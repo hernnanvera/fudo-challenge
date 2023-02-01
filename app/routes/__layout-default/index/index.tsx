@@ -4,6 +4,7 @@ import { useLoaderData } from "@remix-run/react";
 import { json, MetaFunction } from "@remix-run/node";
 import CardContainer from "~/components/card-container";
 import { getSiteConfig } from "~/utils/config/index.server";
+import Pagination from "~/components/pagination";
 
 export const meta: MetaFunction = ({ data }) => {
 
@@ -17,20 +18,25 @@ export const meta: MetaFunction = ({ data }) => {
 
 export const loader: LoaderFunction = async ({ request,
   params }) => {
-    
+
   const urlSearchParams: URLSearchParams = new URLSearchParams();
   const page = params?.pageNumber || getSiteConfig('initPage');
+  const pageSize = getSiteConfig('pageSize');
   urlSearchParams.append('page', page.toString())
+  urlSearchParams.append('page', pageSize)
   const promises = [NewsAPI.loadNews(urlSearchParams, request)];
   const [news] = await Promise.all(promises);
   const canonicalUrl = getSiteConfig('canonicalBaseUrl');
-  const title =  getSiteConfig('title')
+  const title = getSiteConfig('title')
 
   return json(
     {
       news: news.articles,
+      totalResults: news.totalResults,
+      currentPage: parseInt(page),
+      pageSize,
       canonicalUrl,
-      title
+      title,
     }
   )
 
@@ -38,19 +44,26 @@ export const loader: LoaderFunction = async ({ request,
 
 interface LoaderData {
   news: any
-  canonicalUrl: string
+  totalResults: number,
+  currentPage: number,
+  pageSize: number,
+  canonicalUrl: string,
   title: string
 }
 
 export default function Index(): JSX.Element {
 
-  const { news, title } = useLoaderData() as LoaderData;
+  const { news, totalResults, currentPage, pageSize, title } = useLoaderData() as LoaderData;
   const showTitle = true;
 
   return (
     <div className="news-container">
       {showTitle && <h1>{title}</h1>}
       <CardContainer newsCards={news} />
+      <Pagination
+        totalResults={totalResults}
+        currentPage={currentPage}
+        pageSize={pageSize} />
     </div>
   );
 }
