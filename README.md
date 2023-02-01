@@ -42,10 +42,11 @@ npm run dev
 ## Documentación extra
 [Notion](https://slime-operation-f35.notion.site/Fudo-Challenge-40e8f08dd71447698492ef9855d1794b)
 
-## Proximas iteraciones
+## Próximas iteraciones
  - Breadcrumbs
  - Lazyload para mejorar el rendimiento en la carga de imágenes
  - Pantalla de error 
  - Mejoras en el paginado para favorecer al crawleo de google.
  - Implementacion de test unitarios
  - Filtro por Origen de la noticia y por Región
+ - Mejoras en meta tags en paginado
