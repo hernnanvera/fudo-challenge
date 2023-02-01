@@ -2,7 +2,7 @@
 ![fudo logo](https://github.com/hernnanvera/fudo-challenge/blob/main/public/icons/logo-fudo.png)
 
 # Hosteado en Vercel
-https://fudo-challenge-hernnanvera.vercel.app/
+https://fudo-challenge.vercel.app/
 
 ## Objetivo
 El ejercicio consiste en crear una aplicación simple en algún framework web (Por ej.
