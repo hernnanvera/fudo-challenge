@@ -12,7 +12,7 @@ export default function Card({ title, author, description, imageUrl }: CardProps
     const articleID = getArticleID(title) || undefined;
     return (
         <>
-            <a className="card" href={articleID}>
+            <a className="card" href={`/${articleID}`}>
                 <img src={imageUrl || "/images/default-image.png"} alt={title}></img>
                 <CardContent
                     title={title}
