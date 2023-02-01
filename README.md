@@ -1,34 +1,38 @@
 # Welcome to Fudo challenge!
+![fudo logo](https://github.com/hernnanvera/fudo-challenge/blob/main/public/icons/logo-fudo.png)
 
-- [Remix Docs](https://remix.run/docs)
+# Hosteado en Vercel
+https://fudo-challenge-hernnanvera.vercel.app/
 
-## Deployment
+## Objetivo
+El ejercicio consiste en crear una aplicación simple en algún framework web (Por ej.
+Angular, React, Vue, u otro) para visualizar noticias, utilizando  API de NewsApi.
 
 After having run the `create-remix` command and selected "Vercel" as a deployment target, you only need to [import your Git repository](https://vercel.com/new) into Vercel, and it will be deployed.
 
-If you'd like to avoid using a Git repository, you can also deploy the directory by running [Vercel CLI](https://vercel.com/cli):
+## Requerimientos Fundamentales
+ - Deberá tener un Header y un Footer.
+ - La página principal debería mostrar todos los artículos devueltos en la primera
+página del request en formato de cards, incluyendo título, autor, descripción e
+imagen.
+ -  El diseño de la página y de las cards queda totalmente libre de definición. La única
+restricción es que tendría que ser responsive e idealmente no utilizar ningún
+framework CSS.
+ - Al clickear una card, debería redirigir a una nueva página mostrando únicamente el
+contenido de la noticia seleccionada.
+ - El proyecto debería subirse a un repositorio en cualquier plataforma.
+ - Optativo: Hostear la aplicación en gh-pages o cualquier otro hosting.
 
-```sh
-npm i -g vercel
-vercel
-```
+## Iniciando el proyecto
 
-It is generally recommended to use a Git repository, because future commits will then automatically be deployed by Vercel, through its [Git Integration](https://vercel.com/docs/concepts/git).
-
-## Development
-
-To run your Remix app locally, make sure your project's local dependencies are installed:
+Para correr la aplicacion de manera local, primero debemos asegurarnos de instalar las dependencias necesarias.
 
 ```sh
 npm install
 ```
 
-Afterwards, start the Remix development server like so:
+Luego, podremos correr la aplicacion con el siguiente comando:
 
 ```sh
 npm run dev
 ```
-
-Open up [http://localhost:3000](http://localhost:3000) and you should be ready to go!
-
-If you're used to using the `vercel dev` command provided by [Vercel CLI](https://vercel.com/cli) instead, you can also use that, but it's not needed.
