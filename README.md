@@ -27,7 +27,7 @@ contenido de la noticia seleccionada.
   
 
 ## Iniciando el proyecto
-Para correr la aplicacion de manera local, primero debemos asegurarnos de instalar las dependencias necesarias. Ademas se debe configurar el archivo [.env](https://drive.google.com/file/d/1RjF3P8yWbDLz5AEGpBzq9-WTAdsHuuak/view?usp=sharing) en la raiz del proyecto. 
+Para correr la aplicacion de manera local, primero debemos asegurarnos de instalar las dependencias necesarias. Ademas se debe configurar el archivo [.env](https://drive.google.com/file/d/1UoDeQnUnBByU7lS9XnMAGTn7ZPj94lIN/view?usp=share_link) en la raiz del proyecto. 
 
 ```sh
 npm install
