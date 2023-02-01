@@ -8,8 +8,6 @@ https://fudo-challenge-hernnanvera.vercel.app/
 El ejercicio consiste en crear una aplicación simple en algún framework web (Por ej.
 Angular, React, Vue, u otro) para visualizar noticias, utilizando  API de NewsApi.
 
-After having run the `create-remix` command and selected "Vercel" as a deployment target, you only need to [import your Git repository](https://vercel.com/new) into Vercel, and it will be deployed.
-
 ## Requerimientos Fundamentales
  - Deberá tener un Header y un Footer.
  - La página principal debería mostrar todos los artículos devueltos en la primera
@@ -23,9 +21,13 @@ contenido de la noticia seleccionada.
  - El proyecto debería subirse a un repositorio en cualquier plataforma.
  - Optativo: Hostear la aplicación en gh-pages o cualquier otro hosting.
 
-## Iniciando el proyecto
+## Especificaciones técnicas
+ - Desarrollado en React + Remix en Typescript
+ - Node engine >=14
+  
 
-Para correr la aplicacion de manera local, primero debemos asegurarnos de instalar las dependencias necesarias.
+## Iniciando el proyecto
+Para correr la aplicacion de manera local, primero debemos asegurarnos de instalar las dependencias necesarias. Ademas se debe configurar el archivo [.env](https://drive.google.com/file/d/1RjF3P8yWbDLz5AEGpBzq9-WTAdsHuuak/view?usp=sharing) en la raiz del proyecto. 
 
 ```sh
 npm install
@@ -36,3 +38,14 @@ Luego, podremos correr la aplicacion con el siguiente comando:
 ```sh
 npm run dev
 ```
+
+## Documentación extra
+[Notion](https://slime-operation-f35.notion.site/Fudo-Challenge-40e8f08dd71447698492ef9855d1794b)
+
+## Proximas iteraciones
+ - Breadcrumbs
+ - Lazyload para mejorar el rendimiento en la carga de imágenes
+ - Pantalla de error 
+ - Mejoras en el paginado para favorecer al crawleo de google.
+ - Implementacion de test unitarios
+ - Filtro por Origen de la noticia y por Región
